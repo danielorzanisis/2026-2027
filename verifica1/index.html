@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Verifica Python</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      display: flex;
+      height: 100vh;
+      background: #f4f4f4;
+      overflow: hidden;
+    }
+    .left {
+      flex: 0 0 auto;     /* non cresce né si riduce automaticamente */
+      min-width: 300px;   /* larghezza minima per leggibilità */
+      max-width: 600px;   /* larghezza massima per non occupare troppo spazio */
+      box-sizing: border-box;
+      overflow-y: auto; /* scroll separato per il testo */
+      border-right: 2px solid #ddd;
+      white-space: pre-wrap; /* mantiene la formattazione */
+      word-wrap: break-word;  /* forza il wrapping delle righe lunghe */
+      padding: 20px;
+    }
+    .right {
+      flex: 1; /* compilatore occupa il resto dello schermo */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-left: 2px solid #ddd;
+      background: #fafafa;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+<code>
+INDICAZIONI
+Per ogni esercizio definisci la funzione richiesta e utilizzala almeno una
+volta per controllare che soddisfi i requisiti.
+I dati arrivano alla funzione attraverso i parametri (input alla funzione):
+non occorre usare la funzione input().
+Tutte le operazioni richieste devono stare dentro la funzione.
+
+Es 1 (4 punti)
+Scrivi una funzione biglietti(nome, quantita), che riceve il nome del cliente e
+il numero di biglietti da acquistare. Ogni biglietto costa 7.50 euro. Calcola il
+totale della spesa e, se si acquistano almeno 4 biglietti, applica uno sconto di
+2 euro sul totale; altrimenti il totale resta invariato.
+La funzione deve restituire una stringa che contenga il nome e il totale,
+come nell'esempio.
+Esempio: biglietti("Anna", 4) --> "Anna deve pagare 28.0 euro"
+
+Es 2 (6 punti)
+Scrivi una funzione playlist(brani, apertura, chiusura), che riceve una lista
+di titoli di canzoni e due stringhe con il titolo iniziale e quello finale.
+La lista brani contiene almeno 5 elementi.
+La funzione deve:
+- creare una nuova lista con i primi due brani e gli ultimi due brani;
+- inserire apertura all'inizio della nuova lista;
+- aggiungere chiusura alla fine della nuova lista;
+- restituire la nuova lista.
+Esempio: playlist(["Sole", "Luna", "Terra", "Mare", "Vento"], "Intro", "Finale")
+--> ["Intro", "Sole", "Luna", "Mare", "Vento", "Finale"]
+
+Es 3 (8 punti)
+Scrivi una funzione finalisti(punteggi), che riceve una lista di punteggi
+interi e restituisce una nuova lista contenente soltanto i punteggi maggiori
+o uguali a 60, nello stesso ordine della lista iniziale. La funzione deve
+funzionare anche se nessuno ha più di 60 punti o se la lista è vuota.
+Esempio 1: finalisti([45, 60, 82, 59, 70])      --> [60, 82, 70]
+Esempio 2: finalisti([45, 50, 32, 59, 10])      --> []
+Esempio 3: finalisti([])                        --> []
+</code>
+  </div>
+  <div class="right">
+    <iframe src="https://www.online-python.com/"></iframe>
+  </div>
+</body>
+</html>
