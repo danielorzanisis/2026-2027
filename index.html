@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Verifica Python</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      display: flex;
+      height: 100vh;
+      background: #f4f4f4;
+      overflow: hidden;
+    }
+    .left {
+      flex: 0 0 auto;     /* non cresce né si riduce automaticamente */
+      min-width: 300px;   /* larghezza minima per leggibilità */
+      max-width: 600px;   /* larghezza massima per non occupare troppo spazio */
+      box-sizing: border-box;
+      overflow-y: auto; /* scroll separato per il testo */
+      border-right: 2px solid #ddd;
+      white-space: pre-wrap; /* mantiene la formattazione */
+      word-wrap: break-word;  /* forza il wrapping delle righe lunghe */
+      padding: 20px;
+    }
+    .right {
+      flex: 1; /* compilatore occupa il resto dello schermo */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-left: 2px solid #ddd;
+      background: #fafafa;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+<code>
+Questa è la piattaforma dove svolgerete la prova, una volta entrati qui non sarà più possibile navigare sul vostro pc. Al termine della prova potrete uscire dalla piattaforma premendo l'icona in basso a destra e inserendo la stessa password utilizzata per l'accesso.
+
+IMPORTANTE!! Prima di uscire dovrete salvare il lavoro svolto, una volta usciti dalla piattaforma tutto il codice non salvato viene perso.
+
+Nella metà sinistra dello schermo (dove state leggendo) troverete il testo della prova, mentre nella parte destra potete vedere un compilatore online per scrivere ed eseguire il vostro codice. Per salvare il file è sufficiente navigare nel file manager (icona del file sotto le 3 linee del menu) e premere sull'icona per il download. Fate attenzione a non uscire dalla pagina del compilatore o a ricaricarla perché anche in questo caso perderete il codice che avete compilato fino a quel momento.
+Per vostra semplicità di utilizzo vi consiglio di impostare testo e terminale uno sopra l'altro (se non appaiono già con questa configurazione). Per farlo premete sull'ingranaggio delle impostazioni e poi premete "Row" in "Editor layout".
+
+Fate tutte le prove che ritenete necessarie (eseguire il codice, scaricare il file, ecc.) in modo da non avere problemi durante lo svolgimento della verifica. Per eventuali domande o chiarimenti mandatemi una mail.
+</code>
+  </div>
+  <div class="right">
+    <iframe src="https://www.online-python.com/"></iframe>
+  </div>
+</body>
+</html>
