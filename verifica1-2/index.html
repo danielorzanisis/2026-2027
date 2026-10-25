@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Verifica Python</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      display: flex;
+      height: 100vh;
+      background: #f4f4f4;
+      overflow: hidden;
+    }
+    .left {
+      flex: 0 0 auto;     /* non cresce né si riduce automaticamente */
+      min-width: 300px;   /* larghezza minima per leggibilità */
+      max-width: 600px;   /* larghezza massima per non occupare troppo spazio */
+      box-sizing: border-box;
+      overflow-y: auto; /* scroll separato per il testo */
+      border-right: 2px solid #ddd;
+      white-space: pre-wrap; /* mantiene la formattazione */
+      word-wrap: break-word;  /* forza il wrapping delle righe lunghe */
+      padding: 20px;
+    }
+    .right {
+      flex: 1; /* compilatore occupa il resto dello schermo */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-left: 2px solid #ddd;
+      background: #fafafa;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+<code>
+INDICAZIONI
+Per ogni esercizio definisci la funzione richiesta e utilizzala almeno una volta per controllare che soddisfi i requisiti.
+I dati arrivano alla funzione attraverso i parametri (input alla funzione): non occorre usare la funzione input().
+Tutte le operazioni richieste devono stare dentro la funzione.
+
+Es 1 (4 punti)
+Scrivi una funzione biglietti(nome, quantita) che riceve due variabili:
+- nome: il nome del cliente, una stringa;
+- quantita: il numero di biglietti, un intero positivo.
+
+La funzione deve:
+1) Calcolare il totale: ogni biglietto costa 7.50 euro, quindi moltiplica il costo per la quantita di biglietti.
+2) Se i biglietti sono almeno 4 (quantita dev'essere maggiore o uguale a 4), togliere 2 euro dal totale. Altrimenti il totale resta invariato.
+3) Costruire un messaggio contenente il nome e il totale.
+4) Restituire il messaggio.
+
+Esempio:
+biglietti("Anna", 4) --> "Anna deve pagare 28.0 euro"
+
+
+Es 2 (6 punti)
+Scrivi una funzione playlist_breve(brani, chiusura) che riceve:
+- brani: una lista con almeno tre titoli di canzoni;
+- chiusura: una stringa con il titolo della canzone finale.
+
+La funzione deve:
+1) Creare una nuova lista con i primi due brani, usando lo slicing.
+2) Inserire il titolo "Intro" all'inizio, usando insert.
+3) Aggiungere chiusura alla fine, usando append.
+4) Restituire la nuova lista.
+
+Esempio:
+playlist_breve(["Sole", "Luna", "Mare"], "Finale") --> ["Intro", "Sole", "Luna", "Finale"]
+
+
+Es 3 (8 punti)
+Scrivi una funzione finalisti(punteggi) che riceve una lista di punteggi (numeri interi).
+
+La funzione deve:
+1) Creare una nuova lista vuota.
+2) Scorrere la lista punteggi con un ciclo while e un indice.
+3) Aggiungere alla nuova lista soltanto i punteggi maggiori o uguali a 60.
+4) Restituire la nuova lista.
+
+Esempio:
+finalisti([40, 60, 80, 55]) --> [60, 80]
+
+</code>
+  </div>
+  <div class="right">
+    <iframe src="https://www.online-python.com/"></iframe>
+  </div>
+</body>
+</html>
