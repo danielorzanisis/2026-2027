@@ -47,23 +47,26 @@ I dati arrivano alla funzione attraverso i parametri (input alla funzione): non 
 Tutte le operazioni richieste devono stare dentro la funzione.
 
 Es 1 (4 punti)
-Scrivi una funzione biglietti(nome, quantita) che riceve il nome del cliente e il numero di biglietti da acquistare. Ogni biglietto costa 7.50 euro. Calcola il totale della spesa e, se si acquistano almeno 4 biglietti, applica uno sconto di 2 euro sul totale; altrimenti il totale resta invariato. La funzione deve restituire una stringa che contenga il nome e il totale, come nell'esempio.
-Esempio: biglietti("Anna", 4) --> "Anna deve pagare 28.0 euro"
+Scrivi una funzione noleggio(nome, ore) che riceve il nome del cliente e il numero intero di ore di noleggio di una bicicletta. Ogni ora costa 4.50 euro. Calcola il totale della spesa e, se il noleggio dura almeno 5 ore, applica uno sconto di 3 euro sul totale; altrimenti il totale resta invariato. La funzione deve restituire una stringa che contenga il nome e il totale, come nell’esempio.
+
+Esempio:
+noleggio("Marco", 5) → "Marco deve pagare 19.5 euro"
 
 Es 2 (6 punti)
-Scrivi una funzione playlist(brani, apertura, chiusura), che riceve una lista di titoli di canzoni e due stringhe con il titolo iniziale e quello finale. La lista brani contiene almeno 5 elementi. La funzione deve:
-- creare una nuova lista con i primi due brani e gli ultimi due brani;
-- inserire apertura all'inizio della nuova lista;
-- aggiungere chiusura alla fine della nuova lista;
+Scrivi una funzione itinerario(tappe, partenza, arrivo) che riceve una lista di nomi di luoghi e due stringhe con il luogo di partenza e quello di arrivo. La lista tappe contiene almeno 6 elementi. La funzione deve:
+- creare una nuova lista con le prime tre tappe e l’ultima tappa;
+- inserire partenza all’inizio della nuova lista;
+- aggiungere arrivo alla fine della nuova lista;
 - restituire la nuova lista.
-Esempio: playlist(["Sole", "Luna", "Terra", "Mare", "Vento"], "Intro", "Finale")
---> ["Intro", "Sole", "Luna", "Mare", "Vento", "Finale"]
+Esempio:
+itinerario(["Museo", "Parco", "Castello", "Lago", "Teatro", "Piazza"], "Scuola", "Stazione") → ["Scuola", "Museo", "Parco", "Castello", "Piazza", "Stazione"]
 
 Es 3 (8 punti)
-Scrivi una funzione finalisti(punteggi), che riceve una lista di punteggi interi e restituisce una nuova lista contenente soltanto i punteggi maggiori o uguali a 60, nello stesso ordine della lista iniziale. La funzione deve funzionare anche se nessuno ha più di 60 punti o se la lista è vuota.
-Esempio 1: finalisti([45, 60, 82, 59, 70])      --> [60, 82, 70]
-Esempio 2: finalisti([45, 50, 32, 59, 10])      --> []
-Esempio 3: finalisti([])                        --> []
+Scrivi una funzione offerte(prezzi) che riceve una lista di prezzi e restituisce una nuova lista contenente soltanto i prezzi minori o uguali a 20 euro, nello stesso ordine della lista iniziale. Usa un ciclo while per scorrere la lista. La funzione deve funzionare anche se tutti i prezzi superano 20 euro o se la lista è vuota.
+
+Esempio 1: offerte([25.0, 20.0, 12.5, 30.0, 8.0]) → [20.0, 12.5, 8.0]
+Esempio 2: offerte([25.0, 40.0, 32.5, 21.0]) → []
+Esempio 3: offerte([]) → []
 </code>
   </div>
   <div class="right">
