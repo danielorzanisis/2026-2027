@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verifica di Python — Prova A</title>
+<style>body {margin:0; font-family:Arial,sans-serif; color:#222; line-height:1.5; font-size:16px}
+main {max-width:850px;margin:30px auto;padding:0 24px}
+h1 {font-size:25px;border-bottom:2px solid #333;padding-bottom:8px}
+h2 {font-size:19px;margin-top:28px}
+.indicazioni {background:#f3f3f3;padding:15px;border-left:4px solid #555}
+.indicazioni p {margin-bottom:0}
+pre {background:#f5f5f5;padding:12px;white-space:pre-wrap;overflow-wrap:anywhere}
+code {font-family:Consolas,monospace;font-size:.92em}
+@page {size:A4;margin:16mm}
+@media print {body {font-size:11pt} main {max-width:none;margin:0;padding:0} article {break-inside:avoid} h1 {font-size:18pt} h2 {font-size:13pt;margin-top:18px}}</style>
+</head>
+<body><main>
+<h1>Verifica di Python — Prova A</h1>
+<p><strong>Per scrivere ed eseguire il codice, apri <a href="https://python-playground.com/">https://python-playground.com/</a>.</strong></p>
+<aside class="indicazioni"><strong>INDICAZIONI</strong><p>Per ogni esercizio definisci la funzione richiesta e utilizzala almeno una volta per controllare che soddisfi i requisiti.<br>
+I dati arrivano alla funzione attraverso i parametri (input alla funzione): non occorre usare la funzione <code>input()</code>.<br>
+Tutte le operazioni richieste devono stare dentro la funzione.<br>
+Per gli esercizi che richiedono di scorrere una lista o una stringa, usa un ciclo <code>while</code>.</p></aside>
+<article><h2>Es. 1 — Abbreviazione di un testo (4 punti)</h2>
+<p>Scrivi una funzione <code>abbrevia(testo)</code> che riceve una stringa.</p>
+<p>Se la stringa contiene più di 5 caratteri, la funzione deve restituire i primi 5 caratteri seguiti da <code>"..."</code>. Altrimenti deve restituire la stringa originale.</p><pre><code>abbrevia(&quot;informatica&quot;) → &quot;infor...&quot;
+abbrevia(&quot;scuola&quot;)      → &quot;scuol...&quot;
+abbrevia(&quot;ciao&quot;)        → &quot;ciao&quot;
+abbrevia(&quot;&quot;)            → &quot;&quot;</code></pre></article><article><h2>Es. 2 — Modificare l’ordine dei turni (6 punti)</h2>
+<p>Scrivi una funzione <code>aggiorna_turni(persone, nuovo)</code> che riceve una lista di nomi e il nome di una nuova persona. La lista contiene almeno 3 elementi.</p>
+<p>La funzione deve:</p><ul>
+<li>creare una nuova lista contenente tutte le persone tranne la prima, mantenendo l’ordine;</li>
+<li>aggiungere alla fine della nuova lista la persona che era prima nella lista originale;</li>
+<li>inserire <code>nuovo</code> in seconda posizione, all’indice <code>1</code>;</li>
+<li>restituire la nuova lista.</li></ul><p>La lista originale deve rimanere invariata.</p><pre><code>aggiorna_turni([&quot;Anna&quot;, &quot;Luca&quot;, &quot;Sara&quot;, &quot;Paolo&quot;], &quot;Marta&quot;)
+→ [&quot;Luca&quot;, &quot;Marta&quot;, &quot;Sara&quot;, &quot;Paolo&quot;, &quot;Anna&quot;]</code></pre></article><article><h2>Es. 3 — Correggere le misurazioni (8 punti)</h2>
+<p>Scrivi una funzione <code>correggi_misure(misure)</code> che riceve una lista di numeri interi.</p>
+<p>La funzione deve restituire una nuova lista della stessa lunghezza, nella quale ogni numero negativo è sostituito da <code>0</code>. Gli altri numeri devono mantenere il proprio valore e la propria posizione.</p>
+<p>La funzione deve funzionare anche con una lista vuota. La lista originale deve rimanere invariata.</p><pre><code>correggi_misure([12, -3, 0, 7, -1]) → [12, 0, 0, 7, 0]
+correggi_misure([-4, -2, -8])       → [0, 0, 0]
+correggi_misure([])                → []</code></pre></article>
+</main></body></html>
