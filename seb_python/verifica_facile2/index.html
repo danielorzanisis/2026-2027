@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verifica di Python — Prova A guidata</title>
+<style>
+body {margin:0;font-family:Arial,sans-serif;font-size:17px;line-height:1.6;color:#222;text-align:left}
+main {max-width:900px;margin:24px 0;padding:0 24px}
+h1 {font-size:25px;border-bottom:2px solid #333;padding-bottom:8px}
+h2 {font-size:20px;margin-top:28px}
+.indicazioni {padding:14px 18px;background:#f3f3f3;border-left:4px solid #555}
+.indicazioni p {margin-bottom:0}
+li {margin-bottom:7px}
+code {font-family:Consolas,monospace;font-size:.94em}
+pre {background:#f5f5f5;padding:12px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.6}
+@page {size:A4;margin:15mm}
+@media print {body {font-size:12pt} main {max-width:none;margin:0;padding:0} h1 {font-size:18pt} h2 {font-size:14pt} article {break-inside:avoid} a {color:inherit}}
+</style>
+</head>
+<body>
+<main>
+<h1>Verifica di Python — Prova A guidata</h1>
+<p><strong>Per scrivere ed eseguire il codice, apri <a href="https://python-playground.com/" target="_blank">Apri Python</a>.</strong></p>
+<aside class="indicazioni">
+<strong>INDICAZIONI</strong>
+<p>Per ogni esercizio definisci la funzione richiesta e utilizzala almeno una volta per controllare che soddisfi i requisiti.<br>
+I dati arrivano alla funzione attraverso i parametri (input alla funzione): non occorre usare la funzione <code>input()</code>.<br>
+Tutte le operazioni richieste devono stare dentro la funzione.</p>
+</aside>
+
+<article>
+<h2>Es. 1 — Abbreviazione di un testo (4 punti)</h2>
+<p>Scrivi una funzione <code>abbrevia(testo)</code> che riceve:</p>
+<ul>
+<li><code>testo</code>: una stringa, anche vuota.</li>
+</ul>
+<p>La funzione deve:</p>
+<ol>
+<li>Calcolare la lunghezza della stringa usando <code>len()</code>.</li>
+<li>Se la lunghezza è <strong>maggiore di 5</strong>, prendere i primi 5 caratteri usando lo slicing. Aggiungere alla fine <code>"..."</code> usando la concatenazione con <code>+</code>.</li>
+<li>Altrimenti mantenere la stringa originale.</li>
+<li>Restituire la stringa ottenuta usando <code>return</code>.</li>
+</ol>
+<p><strong>Esempi</strong></p>
+<pre><code>abbrevia("informatica") → "infor..."
+abbrevia("ciao")        → "ciao"
+abbrevia("verde")       → "verde"
+abbrevia("")            → ""</code></pre>
+</article>
+
+<article>
+<h2>Es. 2 — Modificare l’ordine dei turni (6 punti)</h2>
+<p>Scrivi una funzione <code>aggiorna_turni(persone, nuovo)</code> che riceve:</p>
+<ul>
+<li><code>persone</code>: una lista con almeno 3 nomi;</li>
+<li><code>nuovo</code>: una stringa con il nome della nuova persona.</li>
+</ul>
+<p>La funzione deve:</p>
+<ol>
+<li>Creare una nuova lista con tutte le persone <strong>tranne la prima</strong>, usando lo slicing a partire dall’indice <code>1</code>.</li>
+<li>Prendere la prima persona dalla lista originale <code>persone</code>. Si trova all’indice <code>0</code>.</li>
+<li>Aggiungere questa persona alla fine della nuova lista, usando <code>append()</code>.</li>
+<li>Inserire <code>nuovo</code> in seconda posizione nella nuova lista, usando <code>insert()</code> con indice <code>1</code>.</li>
+<li>Restituire la nuova lista usando <code>return</code>.</li>
+</ol>
+<p>La lista originale <code>persone</code> deve rimanere invariata.</p>
+<p><strong>Esempio</strong></p>
+<pre><code>aggiorna_turni(["Anna", "Luca", "Sara", "Paolo"], "Marta")
+→ ["Luca", "Marta", "Sara", "Paolo", "Anna"]</code></pre>
+</article>
+
+<article>
+<h2>Es. 3 — Correggere le misurazioni (8 punti)</h2>
+<p>Scrivi una funzione <code>correggi_misure(misure)</code> che riceve:</p>
+<ul>
+<li><code>misure</code>: una lista di numeri interi, anche vuota.</li>
+</ul>
+<p>La funzione deve:</p>
+<ol>
+<li>Creare una nuova lista vuota.</li>
+<li>Creare un indice <code>i</code> con valore iniziale <code>0</code>.</li>
+<li>Scorrere la lista con un ciclo <code>while</code>, finché <code>i</code> è minore della lunghezza di <code>misure</code>.</li>
+<li>A ogni giro controllare il numero <code>misure[i]</code>:
+<ul>
+<li>se è minore di <code>0</code>, aggiungere <code>0</code> alla nuova lista con <code>append()</code>;</li>
+<li>altrimenti aggiungere il numero originale <code>misure[i]</code>.</li>
+</ul>
+</li>
+<li>Aumentare <code>i</code> di <code>1</code> alla fine di ogni giro, in entrambi i casi.</li>
+<li>Dopo il ciclo, restituire la nuova lista usando <code>return</code>.</li>
+</ol>
+<p>La nuova lista deve avere la stessa lunghezza di quella originale. La lista originale deve rimanere invariata.</p>
+<p><strong>Esempi</strong></p>
+<pre><code>correggi_misure([12, -3, 0, 7, -1]) → [12, 0, 0, 7, 0]
+correggi_misure([-4, -2, -8])       → [0, 0, 0]
+correggi_misure([])                → []</code></pre>
+</article>
+</main>
+</body>
+</html>
